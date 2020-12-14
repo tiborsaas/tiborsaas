@@ -1,16 +1,15 @@
-### Hi there 👋
+<div align="center">
+	<a href="https://tibor.szasz.hu">
+		<img src="header.svg" width="800" height="800">
+	</a>
+</div>
 
-<!--
-**tiborsaas/tiborsaas** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### Projects that I'm tweaking
 
-Here are some ideas to get you started:
+- ⚡ https://instart.design/
+- ⚡ http://humanmusic.tv/
+- ⚡ http://tiborsaas.substack.com/
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Credits
+
+The animated header is based on the [CSS in Readme](https://github.com/sindresorhus/css-in-readme-like-wat) idea.
