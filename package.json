@@ -1,0 +1,21 @@
+{
+  "name": "tiborsaas",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r \t<a href=\"https://tibor.szasz.hu\">\r \t\t<img src=\"header.svg\" width=\"800\" height=\"800\">\r \t</a>\r </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiborsaas/tiborsaas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiborsaas/tiborsaas/issues"
+  },
+  "homepage": "https://github.com/tiborsaas/tiborsaas#readme"
+}
