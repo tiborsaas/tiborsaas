@@ -1,0 +1,181 @@
+<svg fill="none" viewBox="0 0 800 800" width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+	<foreignObject width="100%" height="100%">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<style>
+				:root {
+					--unit: calc(100% / 7);
+					--logoColor: #f09;
+					--logoColor: cyan;
+					--rotation: 0deg;
+					--logoPath: polygon(
+						0 0, /* top left */
+						calc(var(--unit) * 7) calc(var(--unit) * 0),
+						calc(var(--unit) * 7) calc(var(--unit) * 3),
+						calc(var(--unit) * 5) calc(var(--unit) * 3),
+						calc(var(--unit) * 5) calc(var(--unit) * 4),
+						calc(var(--unit) * 7) calc(var(--unit) * 4),
+						calc(var(--unit) * 7) calc(var(--unit) * 5),
+						calc(var(--unit) * 4) calc(var(--unit) * 5),
+						calc(var(--unit) * 4) calc(var(--unit) * 2),
+						calc(var(--unit) * 6) calc(var(--unit) * 2),
+						calc(var(--unit) * 6) calc(var(--unit) * 1),
+						calc(var(--unit) * 1) calc(var(--unit) * 1),
+						calc(var(--unit) * 1) calc(var(--unit) * 2),
+						calc(var(--unit) * 3) calc(var(--unit) * 2),
+						calc(var(--unit) * 3) calc(var(--unit) * 5),
+						calc(var(--unit) * 0) calc(var(--unit) * 5),
+						calc(var(--unit) * 0) calc(var(--unit) * 4),
+						calc(var(--unit) * 2) calc(var(--unit) * 4),
+						calc(var(--unit) * 2) calc(var(--unit) * 3),
+						calc(var(--unit) * 0) calc(var(--unit) * 3)
+					);
+				}
+
+				@keyframes gradientBackground {
+					0% {
+						background-position: 0% 20%;
+					}
+					50% {
+						background-position: 100% 100%;
+					}
+					100% {
+						background-position: 0% 20%;
+					}
+				}
+
+				@keyframes shadowFilter {
+					0% {
+						filter: blur(6px) invert(1);
+						transform: translate(5px, -5px) rotateY(var(--rotation));
+					}
+					50% {
+						filter: blur(24px) invert(1);
+						transform: translate(5px, 8px) rotateY(var(--rotation));
+					}
+					100% {
+						filter: blur(6px) invert(1);
+						transform: translate(5px, -5px) rotateY(var(--rotation));
+					}
+				}
+
+				.container {
+					font-family:
+						system-ui,
+						-apple-system,
+						'Segoe UI',
+						Roboto,
+						Helvetica,
+						Arial,
+						sans-serif,
+						'Apple Color Emoji',
+						'Segoe UI Emoji';
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					margin: 0;
+					width: 100%;
+					height: 800px;
+					background: linear-gradient(-5deg, #333, #bbb, #333);
+					background-size: 1500% 150%;
+					animation: gradientBackground 13s ease infinite;
+					border-radius: 10px;
+					position: relative;
+					perspective: 500px;
+					filter: contrast(150%) blur(1px) brightness(.85) sepia(1);
+					<!-- filter: contrast(150%) blur(1px) brightness(.85) sepia(1) grayscale(1); -->
+				}
+					.container section {
+						position: absolute;
+						left: 200px;
+						top: 200px;
+					}
+
+				.logo {
+					width: 400px;
+					height: 400px;
+					position: relative;
+					mix-blend-mode: overlay;
+					transform: rotateY(var(--rotation));
+				}
+
+					.logo-path {
+						width: 400px;
+						height: 400px;
+						background: var(--logoColor);
+						clip-path: var(--logoPath);
+					}
+
+					.layer-1 {
+						filter: blur(2px) invert(0);
+						transform: rotateZ(.75deg) rotateY(var(--rotation));
+						mix-blend-mode: overlay;
+					}
+
+						.layer-1 .logo-path {
+							background: var(--logoColor);
+							clip-path: var(--logoPath);
+						}
+
+						.layer-1 footer {
+							background: var(--logoColor);
+						}
+
+					.layer-2 {
+						filter: blur(2px) invert(1);
+						transform: rotateZ(-.75deg) rotateY(var(--rotation));
+						mix-blend-mode: overlay;
+					}
+
+						.layer-2 .logo-path {
+							background: var(--logoColor);
+							clip-path: var(--logoPath);
+						}
+
+						.layer-2 footer {
+							background: var(--logoColor);
+						}
+
+					.layer-3 {
+						animation: shadowFilter 13s linear infinite;
+						mix-blend-mode: overlay;
+					}
+
+						.layer-3 .logo-path {
+							background: var(--logoColor);
+							clip-path: var(--logoPath);
+						}
+
+						.layer-3 footer {
+							background: var(--logoColor);
+						}
+
+					footer {
+						position: absolute;
+						top: calc(var(--unit) * 6);
+						width: calc(var(--unit) * 7);
+						height: var(--unit);
+						background: var(--logoColor);
+					}
+			</style>
+			<div class="container">
+				<section class="logo layer-1">
+					<article class="logo-path"></article>
+					<footer></footer>
+				</section>
+				<section class="logo layer-2">
+					<article class="logo-path"></article>
+					<footer></footer>
+				</section>
+				<section class="logo layer-3">
+					<article class="logo-path"></article>
+					<footer></footer>
+				</section>
+				<section class="logo">
+					<article class="logo-path"></article>
+					<footer></footer>
+				</section>
+			</div>
+		</div>
+	</foreignObject>
+</svg>
